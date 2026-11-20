@@ -10,12 +10,12 @@ If the framework or behavior is unclear, ask for the smallest relevant evidence,
 
 - Verify an outcome that would fail if the required behavior regressed. A successful click, status code alone, or visible container can be insufficient when the contract also requires a specific value, state, or persisted side effect.
 - When a test claims an action changed a value or state, establish the before state with trusted setup or an explicit check. If the fixture's starting value is unverified and the requirement gives it, assert the starting value before the action where the same observable represents that value.
-- For a persistence test with a specified value, start with a record that has a different value so that an already matching value cannot pass the test. Use controlled setup when available. Otherwise make the distinct starting value a precondition or assert it in the test body.
+- For persistence, start from a distinct value and read the saved state through a fresh page load or a separate request. A success message alone does not prove persistence. Use controlled setup when available. Otherwise state or assert the starting condition.
 - Derive the assertion from the requirement or contract. Use implementation details to operate the system, and call out any conflict between the implementation and expected behavior.
 - Match the requirement to the right observable. If a ticket specifies the subtotal and the available locator is for the total, clarify the relationship or make the draft conditional on their equivalence in the scenario.
 - Keep tests isolated. Use controlled data and the project's fixtures or cleanup patterns. Prefer small changes and reuse established helpers where they fit.
 - In Playwright, prefer role or label locators or agreed test IDs, and web-first assertions. Wait for the observable condition that matters. For a flaky test, inspect traces and evidence before changing timeouts, retries, or assertions.
-- In API checks, verify the parts of the documented response or resulting state that matter to the feature. Use existing tools and authorized test data. For SQL verification, prefer read-only queries with narrow filters and use the schema supplied by the user or available in the project.
+- In API checks, verify the parts of the documented response or resulting state that matter to the feature. Preserve the project's setup and cleanup for checks that write data. If a write times out, check the resulting state before retrying. Use existing tools and authorized test data. For SQL verification, prefer read-only queries with narrow filters and use the schema supplied by the user or available in the project.
 
 ## Verify and report
 

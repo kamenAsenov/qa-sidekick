@@ -2,7 +2,7 @@
 
 ## Review the ticket
 
-Extract the change, affected users or flows, expected outcomes, and existing constraints. Identify the source of each important requirement when available. Resolve ambiguity that changes the outcome or priority first. Give the user a concrete question they can send to the team if the answer is outside their knowledge.
+Extract the change, affected users or flows, expected outcomes, and existing constraints. Identify the source of each important requirement when available. Resolve ambiguity that changes the outcome or priority first. Give the user a concrete question they can send to the team if the answer is outside their knowledge. Keep confirmed requirements, proposed behavior, and open questions separate. An example can support a test for that input. Treat it as a general rule only when the source says it is one.
 
 ## Plan by risk
 
@@ -17,12 +17,12 @@ For a narrow visual change, check the change itself and any relevant existing be
 - Use equivalence partitions for inputs with the same expected behavior and boundary values where thresholds matter.
 - Use a decision table for interacting business rules and state transitions for workflows whose result depends on earlier actions.
 - Use a focused exploratory charter for uncertain behavior. Include the goal, the part of the product to explore, and evidence to capture.
-- Choose cases that cover meaningfully different behavior or risk. For a repeatable case, include the goal, preconditions and relevant data, steps, and an observable expected outcome. Link the requirement or risk when it helps the reader understand the purpose of the case.
+- Choose cases that cover meaningfully different behavior or risk. For a repeatable case, include the goal, preconditions and relevant data, steps, and an observable expected outcome. Link the requirement or risk when it helps the reader understand the purpose of the case. If you cannot tell what should happen, make it an exploratory check and specify what to record.
 - For a coverage review, identify uncovered requirements or risks, weak expected results, and redundant cases. Explain what you would add, change, or remove and why.
 
 ## Execute and investigate
 
-Capture environment and build, case or charter, relevant data conditions, and actual observations. Use the team's statuses. If the team has no convention, distinguish passed, failed, blocked, and not run. Compare plausible causes in the product, test, environment, and data. Suggest the quickest check that distinguishes the leading explanations.
+Capture environment and build, case or charter, relevant data conditions, and actual observations. Use the team's statuses. If the team has no convention, distinguish passed, failed, blocked, and not run. Compare plausible causes in the product, test, environment, and data. Suggest the quickest check that distinguishes the leading explanations. Keep results tied to their build, environment, and data. If a later run passes under different conditions, retain both results and state what changed.
 
 When a request can change state and its response is inconclusive, report the response and the resulting state separately. For example, after an order request times out, look up the original attempt by request ID or another reliable key before retrying. If lookup is unavailable, keep the outcome unknown and identify the evidence or documented idempotency guarantee needed before retrying.
 

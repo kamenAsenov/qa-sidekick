@@ -63,6 +63,13 @@
     "expectation": "Разграничава доказателство за нормализация от проверка за дубликат; може да се наблюдава implicit selection."
   },
   {
+    "id": "P06",
+    "group": "planning",
+    "mode": "explicit",
+    "prompt": "The ticket says valid promo codes reduce the subtotal. It gives one example: SAVE10 takes $100 to $90. The rules for other codes are missing. Give two checks and a clarification for the product owner.",
+    "expectation": "Uses $90 as the expected result for the given example, proposes a check that does not assume an unknown promo rule, and asks what rules apply to other codes."
+  },
+  {
     "id": "D01",
     "group": "design",
     "mode": "explicit",
@@ -187,6 +194,13 @@
     "mode": "explicit",
     "prompt": "Give me a three-sentence go/no-go status for staging build 2.4. Checkout smoke passed. Refund verification is a mandatory release gate but was blocked by missing seeded orders. The release owner can waive the gate and has not done so.",
     "expectation": "Preserves the smoke pass and blocked refund status, identifies the unsatisfied mandatory gate, gives a concrete way to obtain evidence or notes the owner's waiver option, and does not claim approval."
+  },
+  {
+    "id": "E08",
+    "group": "execution",
+    "mode": "explicit",
+    "prompt": "Write a two-sentence Jira update. On staging build 2.4, refund creation failed for a seeded order. On build 2.5, it passed for a newly created order. The seeded order has not been retested on 2.5.",
+    "expectation": "Preserves both results, their builds and order types, and the pending verification for seeded orders. Does not claim a confirmed fix."
   },
   {
     "id": "N01",

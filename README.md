@@ -6,9 +6,11 @@
 
 A Codex skill for reviewing requirements, planning tests, writing functional checks, and reporting bugs or release status.
 
-## Try it in Codex
+## Install
 
-Open this repository in Codex and start your prompt with `$qa-sidekick`. To use the skill in another project, copy `.agents/skills/qa-sidekick` into that project's `.agents/skills` directory. [Codex skill documentation](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
+[Setup for Codex, Claude, GitHub Copilot, Gemini, and other clients](docs/install.md). In Codex, open this checkout, select `$qa-sidekick`, and add your task.
+
+## Example prompts
 
 - I have 20 minutes to test this ticket. Which checks come first?
 - Review these test cases for gaps. Keep our format.
@@ -22,7 +24,7 @@ Use Node.js 24 and sign in to Codex CLI before collecting responses.
 ```sh
 node validation/run-cli-checks.mjs                 # Four smoke scenarios
 node validation/run-cli-checks.mjs --all --dry-run  # List scenarios without sending requests
-node validation/run-cli-checks.mjs --all            # Collect responses for all 28 scenarios
+node validation/run-cli-checks.mjs --all            # Collect responses for all 30 scenarios
 node --test validation/cart.test.mjs validation/result-files.test.mjs
 ```
 
