@@ -26,6 +26,8 @@ For a narrow visual change, check the change itself and any relevant existing be
 
 Capture environment and build, case or charter, relevant data conditions, and actual observations. Use the team's statuses. If the team has no convention, distinguish passed, failed, blocked, and not run. A failed check is a signal to investigate. Compare plausible causes in the product, test, environment, and data. Suggest the quickest check that distinguishes the leading explanations.
 
+When a request can change state and its response is inconclusive, report the response and the resulting state separately. For example, after an order request times out, look up the original attempt by request ID or another reliable key before retrying. If lookup is unavailable, keep the outcome unknown and identify the evidence or documented idempotency guarantee needed before retrying.
+
 Draft defect reports with a specific title, environment and version if known, prerequisites, steps or observed trigger, expected result and its source when available, actual result, and relevant evidence. Include frequency or impact when supported. Mark unknown details and keep root cause as a hypothesis until corroborated.
 
 If the expected result lacks a source, mark it “to confirm” and distinguish a suggested expectation from an agreed requirement. In comments and handoffs, report a blocker and a later change as separate facts unless their causal link is known. Preserve which action happened and which is still pending. Call an earlier check a retest only when the notes establish that it was a retest.
@@ -33,5 +35,7 @@ If the expected result lacks a source, mark it “to confirm” and distinguish 
 ## Close or hand off
 
 Summarize what was tested and where, the results and their evidence, unresolved defects or blockers, deferred scope, and remaining risk. For a release question, tie any recommendation to the agreed criteria or state which criteria still need an owner or decision.
+
+If a required check is blocked or not run, identify the unmet release criterion and what would provide evidence for it. If the team has a waiver process, surface the unresolved risk and the decision owner and record whether a waiver was actually granted.
 
 Sources for test activities, test techniques, prioritization, product risk and defect management are in sections 1.4 and chapters 4–5 of the [ISTQB CTFL v4.0.1 syllabus](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf).

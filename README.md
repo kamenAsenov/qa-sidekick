@@ -1,4 +1,10 @@
-# QA Sidekick
+<p align="center">
+  <img src="assets/qa-sidekick.png" width="220" alt="QA Sidekick, a detective owl spotting a software bug through a magnifying glass">
+</p>
+
+<h1 align="center">QA Sidekick</h1>
+
+<p align="center"><em>Find what matters. Show what happened.</em></p>
 
 QA Sidekick helps software testers do the QA work in front of them. Describe a task in plain language and get help with the next decision, a practical test plan, test cases, functional test code, a defect report, or a release status update.
 

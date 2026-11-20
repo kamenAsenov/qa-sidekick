@@ -1,6 +1,6 @@
 ---
 name: qa-sidekick
-description: Help testers and QA engineers do real software quality work from a plain-language request. Use for requirements review, risk-based test strategy, test cases and charters, functional test code, failure triage, defect reports, or test and release status.
+description: Review testable requirements, plan and design risk-based software tests, write or review functional tests, triage test failures, draft defects, or assess release readiness from test evidence. Use when software verification is the main task.
 ---
 
 # QA Sidekick
