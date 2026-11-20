@@ -16,3 +16,29 @@ We tried 30 independent QA scenarios and repeated the four requests that exposed
 | A Cypress persistence check could pass if the name was already the expected value | Add a distinct starting value as setup or a precondition. The repeated response asserted it before saving. |
 
 These probes reviewed assistant responses and generated code as text. They did not verify automatic skill discovery or execute the generated tests against software.
+
+## Executable regression check
+
+The [cart test](../validation/cart.test.mjs) makes three requests to an in-process fixture. It reads a cart at 10,000 cents, applies a promo, and reads the cart again to verify 9,000 cents. The simulated regression still reports a successful promo request while leaving the subtotal unchanged.
+
+Using Node 24, run from the repository root:
+
+```sh
+node --test validation/cart.test.mjs
+```
+
+To simulate the regression in Bash:
+
+```sh
+QA_SIDEKICK_MUTATE=1 node --test validation/cart.test.mjs
+```
+
+In PowerShell:
+
+```powershell
+$env:QA_SIDEKICK_MUTATE = '1'
+node --test validation/cart.test.mjs
+Remove-Item Env:QA_SIDEKICK_MUTATE
+```
+
+The normal run passed. The simulated regression failed at the subtotal assertion with actual `10000` and expected `9000`. The requests use the standard `Request` and `Response` objects. No external service, browser, or TCP transport was exercised.

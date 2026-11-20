@@ -10,7 +10,7 @@
 
 - Open a clean checkout and confirm Codex discovers the skill and can invoke it explicitly.
 - Try implicit selection on relevant QA requests and check an unrelated prompt for unwanted activation.
-- Run a generated test end to end against a controlled local fixture. Record the command and result, and confirm the test fails when the required outcome regresses.
+- The [in-process cart regression check](docs/behavior-review.md#executable-regression-check) passes on the baseline and catches the simulated fault. Try a test generated in a new Codex session against a running application next.
 - Recheck handling of unconfirmed requirements, status changes, and team templates in both Bulgarian and English.
 
 ## 3. Prepare for public distribution
