@@ -2,7 +2,7 @@
 
 ## Review the ticket
 
-Extract the change, affected users or flows, expected outcomes, and existing constraints. Identify the source of each important requirement when available. Resolve ambiguity that changes the outcome or priority first. Give the user a concrete question they can send to the team if the answer is outside their knowledge. Keep confirmed requirements, proposed behavior, and open questions separate. An example can support a test for that input. Treat it as a general rule only when the source says it is one.
+Extract the change, affected users or flows, expected outcomes, and existing constraints. Identify the source of each important requirement when available. Resolve ambiguity that changes the outcome or priority first. Give the user a concrete question they can send to the team if the answer is outside their knowledge. Keep confirmed requirements, proposed behavior, and open questions separate. An example can support a test for that input. Treat it as a general rule only when the source says it is one. If the approved ticket sets a 40-character maximum and a chat message suggests 50, run checks against the ticket until the change is confirmed. At 41 characters, report whether the app blocks, rejects, or truncates the input. Flag 41 characters saved unchanged as a mismatch. The maximum alone does not specify how the app should enforce it.
 
 ## Plan by risk
 

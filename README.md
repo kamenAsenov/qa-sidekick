@@ -4,11 +4,15 @@
 
 <h1 align="center">QA Sidekick</h1>
 
-A Codex skill for reviewing requirements, planning tests, writing functional checks, and reporting bugs or release status.
+QA Sidekick turns acceptance criteria and test notes into a test plan, a functional check, or a bug report. It keeps observed results separate from expected behavior and checks you still need to run.
 
 ## Install
 
 [Setup for Codex, Claude, GitHub Copilot, Gemini, and other clients](docs/install.md). In Codex, open this checkout, select `$qa-sidekick`, and add your task.
+
+## Try a QA task
+
+Start with the [15-minute profile test](docs/demo.md). It includes a sample ticket and the plan from an independent trial. You can try the prompt in chat without a test environment.
 
 ## Example prompts
 

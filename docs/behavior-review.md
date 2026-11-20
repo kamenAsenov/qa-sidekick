@@ -42,3 +42,14 @@ Remove-Item Env:QA_SIDEKICK_MUTATE
 ```
 
 The normal run passed. The simulated regression failed at the subtotal assertion with actual `10000` and expected `9000`. The requests use the standard `Request` and `Response` objects. No external service, browser, or TCP transport was exercised.
+
+
+## Release trials
+
+| Trial | Method | Result |
+| --- | --- | --- |
+| Codex discovery | The local Codex app server scanned a temporary project containing the published skill layout. | It found `qa-sidekick` enabled at the expected repository path. This check ran without a model request. |
+| Plan and status | A separate agent read QA Sidekick and responded to a Bulgarian request about a profile change and a disputed field limit. | It proposed save and reload checks, distinguished the ticket from the unconfirmed change, and reported the existing `Saved` observation separately from unexecuted tests. See the [profile example](demo.md). |
+| Generated functional test | A separate agent read QA Sidekick and generated a Node test from the cart contract and handler. It did not use the existing cart test. We executed its test body and assertions against the in-process fixture. | The normal test passed. With the fault enabled, the promo request still succeeded and the fresh cart read failed at the subtotal assertion. Actual: `10000`. Expected: `9000`. |
+
+These trials used explicit skill instructions. They do not establish automatic activation or equivalent behavior in other clients.
