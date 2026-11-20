@@ -17,6 +17,12 @@ For example, use the instruction that fits the work you already have.
 
 Use approved work materials or synthetic examples when trying it.
 
+## Review CLI responses
+
+With Node.js and Codex CLI installed and signed in, run `node validation/run-cli-checks.mjs` for four smoke scenarios, or add `--all` for the full set. Use `--all --dry-run` to list scenarios without sending requests. Results go into a new directory under `.qa-results`; the runner refuses to overwrite existing evidence. A captured response still needs review against its accompanying criteria, and does not by itself prove skill activation.
+
+Run `node --test validation/result-files.test.mjs` to check the result-file protection.
+
 ## Project files
 
 - [Skill and references](.agents/skills/qa-sidekick/SKILL.md)
