@@ -15,7 +15,7 @@ We tried 30 independent QA scenarios and repeated the four requests that exposed
 | A draft inferred the cause of an earlier blocker | Preserve the stated facts. On repeat, the agent removed the assumed cause but initially called the earlier check a retest. It then corrected its answer. The final timeline clarification still needs an independent retry. |
 | A Cypress persistence check could pass if the name was already the expected value | Add a distinct starting value as setup or a precondition. The repeated response asserted it before saving. |
 
-These probes reviewed assistant responses and generated code as text. They did not verify automatic skill discovery or execute the generated tests against software.
+The review covered response text and code samples. Automatic skill discovery and execution of the generated tests were out of scope.
 
 ## Executable regression check
 

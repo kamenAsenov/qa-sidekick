@@ -18,5 +18,3 @@
 - Publish a small set of copyable requests organized by work stage and include setup for reuse in other projects.
 - Decide the license with the repository owner before calling a release open source.
 - Evaluate plugin packaging after the repo-scoped skill is verified.
-
-Prioritize improvements from observed QA work and reproducible failures. The product should help the user complete their own work at whichever stage they start.

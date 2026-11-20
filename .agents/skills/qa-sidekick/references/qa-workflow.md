@@ -1,7 +1,5 @@
 # QA workflow
 
-Adapt the following activities to the team's process and the user's current decision. A short answer or artifact often suffices.
-
 ## Review the ticket
 
 Extract the change, affected users or flows, expected outcomes, and existing constraints. Identify the source of each important requirement when available. Resolve ambiguity that changes the outcome or priority first. Give the user a concrete question they can send to the team if the answer is outside their knowledge.
@@ -10,7 +8,7 @@ Extract the change, affected users or flows, expected outcomes, and existing con
 
 Prioritize by likely failure and impact on the user or business. Consider affected integrations, data changes, and adjacent workflows. State what is in scope, what is deferred, and why. Identify the environment, data, or dependency that could block a meaningful check. If time is limited, put the checks most likely to change the decision first and name the main remaining risk.
 
-A strategy describes the approach and tradeoffs. A plan translates them into scope, checks, dependencies, and decision criteria as needed. Combine these in a short deliverable when that fits the request.
+A strategy explains the approach and tradeoffs. A plan lists the scope, checks, dependencies, and decision criteria.
 
 For a narrow visual change, check the change itself and any relevant existing behavior. When prior behavior or the design is unavailable, state what to compare or verify conditionally. For example, an icon change alone does not establish that the control opens a panel.
 
@@ -24,7 +22,7 @@ For a narrow visual change, check the change itself and any relevant existing be
 
 ## Execute and investigate
 
-Capture environment and build, case or charter, relevant data conditions, and actual observations. Use the team's statuses. If the team has no convention, distinguish passed, failed, blocked, and not run. A failed check is a signal to investigate. Compare plausible causes in the product, test, environment, and data. Suggest the quickest check that distinguishes the leading explanations.
+Capture environment and build, case or charter, relevant data conditions, and actual observations. Use the team's statuses. If the team has no convention, distinguish passed, failed, blocked, and not run. Compare plausible causes in the product, test, environment, and data. Suggest the quickest check that distinguishes the leading explanations.
 
 When a request can change state and its response is inconclusive, report the response and the resulting state separately. For example, after an order request times out, look up the original attempt by request ID or another reliable key before retrying. If lookup is unavailable, keep the outcome unknown and identify the evidence or documented idempotency guarantee needed before retrying.
 
@@ -38,4 +36,4 @@ Summarize what was tested and where, the results and their evidence, unresolved 
 
 If a required check is blocked or not run, identify the unmet release criterion and what would provide evidence for it. If the team has a waiver process, surface the unresolved risk and the decision owner and record whether a waiver was actually granted.
 
-Sources for test activities, test techniques, prioritization, product risk and defect management are in sections 1.4 and chapters 4–5 of the [ISTQB CTFL v4.0.1 syllabus](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf).
+Sources for test activities, test techniques, prioritization, product risk and defect management are in sections 1.4 and chapters 4 and 5 of the [ISTQB CTFL v4.0.1 syllabus](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf).

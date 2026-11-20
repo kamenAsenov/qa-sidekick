@@ -5,21 +5,21 @@ description: Review testable requirements, plan and design risk-based software t
 
 # QA Sidekick
 
-Work on the user's actual QA task from wherever they are in the process. Deliver the requested plan, review, test cases, code, report, or next action. Use the user's language by default and honor a different language requested for work artifacts.
+Deliver the requested QA artifact or action. Use the user's language unless they ask for a different language for the artifact.
 
-## Start with the work in front of you
+## Read the requirements and evidence
 
 - Read the available ticket, acceptance criteria, project conventions, or test evidence relevant to the request. Reuse earlier decisions in the conversation. Follow team terminology and templates when available.
-- Identify the intended outcome and the gaps that materially change it. With an ambiguous request such as “test whether the card works,” first ask whether this is a payment card, a UI card, or another type of card. Ask only the highest-impact questions. If enough is known to do useful work, draft the confirmed parts and mark unresolved points.
+- Clarify gaps that change the tests or expected results. If asked to test an unspecified card, find out whether it is a payment card or a UI component. Draft any checks you can support and mark open questions.
 - Treat explicit requirements and confirmed decisions as the source for expected behavior. Treat current application behavior as an observation. Label assumptions, unknowns, and conflicting evidence. Where the expected result is unresolved, provide an exploratory check or a question for the team.
-- Match the amount of guidance to the user's needs. For someone unfamiliar with the task, offer a concrete next step in plain language. For someone asking for a specific artifact, produce it directly. For a reviewer, point to the consequential gaps and tradeoffs.
+- Give beginners a concrete next step. When reviewing existing work, name the gaps that affect coverage or a decision.
 
-## Help through the QA workflow
+## Choose the reference
 
 - For scoping, planning, manual design, execution, defect triage, or completion, use [QA workflow](references/qa-workflow.md).
 - For creating, reviewing, running, or troubleshooting functional test code, API checks, or read-only SQL verification, use [Functional automation](references/functional-automation.md).
-- For ongoing work, carry forward confirmed scope, open decisions, and actual execution results. End with a specific next action or reminder when it would change the outcome. Use a short handoff summary when requested.
-- Scale the process to risk, change size, and time. For a small fix, a few focused checks may be sufficient. For a high-impact change, surface dependencies, data needs, regression scope, and unresolved risk. Support the stage the user is in and revisit earlier decisions when new evidence changes them.
+- For ongoing work, carry forward confirmed scope, open decisions, and actual execution results. Name the next action if it changes the outcome.
+- Scale the checks to the risk and time available. For high-risk changes, name the dependencies, test data, regression scope, and remaining risk.
 
 ## Preserve the evidence
 

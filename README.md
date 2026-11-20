@@ -1,33 +1,32 @@
 <p align="center">
-  <img src="assets/qa-sidekick.png" width="220" alt="QA Sidekick, a detective owl spotting a software bug through a magnifying glass">
+  <img src="assets/qa-sidekick.png" width="220" alt="QA Sidekick, a muscular tester holding a magnifying glass over a software bug">
 </p>
 
 <h1 align="center">QA Sidekick</h1>
 
-<p align="center"><em>Find what matters. Show what happened.</em></p>
-
-QA Sidekick helps software testers do the QA work in front of them. Describe a task in plain language and get help with the next decision, a practical test plan, test cases, functional test code, a defect report, or a release status update.
-
-The project starts as a Codex skill for QA practitioners at any experience level, with particular care for people who are new to QA or AI. It uses established testing practices and adapts to the team's tools, templates, and evidence.
+A Codex skill for reviewing requirements, planning tests, writing functional checks, and reporting bugs or release status.
 
 ## Try it in Codex
 
-Open this repository from the branch containing the skill. In a Codex client that supports local skills, select `$qa-sidekick` and describe your own task. From the repository root, Codex looks for repository skills under `.agents/skills`. To reuse it in another project, copy the complete skill directory into that project's `.agents/skills` directory. [Codex skill documentation](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
+Open this repository in Codex and start your prompt with `$qa-sidekick`. To use the skill in another project, copy `.agents/skills/qa-sidekick` into that project's `.agents/skills` directory. [Codex skill documentation](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
 
-For example, use the instruction that fits the work you already have.
+- I have 20 minutes to test this ticket. Which checks come first?
+- Review these test cases for gaps. Keep our format.
+- Write a functional test with this repo's fixtures. Run it if you can and report the result.
+- Turn these notes into a Jira draft in English. Flag anything I still need to confirm.
 
-- “I have 20 minutes for this ticket. Read the acceptance criteria and tell me what to check first.”
-- “Review these cases for gaps. Keep the team's format and flag any assumptions.”
-- “Write a functional test using the fixtures and conventions in this repo. Tell me whether it ran.”
-- “Turn my observations into a Jira draft in English. Mark what still needs confirmation.”
+## Run the checks
 
-Use approved work materials or synthetic examples when trying it.
+Use Node.js 24 and sign in to Codex CLI before collecting responses.
 
-## Review CLI responses
+```sh
+node validation/run-cli-checks.mjs                 # Four smoke scenarios
+node validation/run-cli-checks.mjs --all --dry-run  # List scenarios without sending requests
+node validation/run-cli-checks.mjs --all            # Collect responses for all 28 scenarios
+node --test validation/cart.test.mjs validation/result-files.test.mjs
+```
 
-With Node.js and Codex CLI installed and signed in, run `node validation/run-cli-checks.mjs` for four smoke scenarios, or add `--all` for the full set. Use `--all --dry-run` to list scenarios without sending requests. Results go into a new directory under `.qa-results`; the runner refuses to overwrite existing evidence. A captured response still needs review against its accompanying criteria, and does not by itself prove skill activation.
-
-Run `node --test validation/result-files.test.mjs` to check the result-file protection.
+Review each response against its criteria in `.qa-results`. Use client events to verify skill activation when they are available.
 
 ## Project files
 
