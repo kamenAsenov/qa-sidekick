@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/qa-sidekick.png" width="220" alt="QA Sidekick, a muscular tester holding a magnifying glass over a software bug">
+  <img src="assets/qa-sidekick-gigachad.png" width="220" alt="QA Sidekick, a muscular tester holding a magnifying glass over a software bug">
 </p>
 
 <h1 align="center">QA Sidekick</h1>
